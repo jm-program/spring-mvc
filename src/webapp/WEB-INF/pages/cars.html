@@ -16,7 +16,7 @@
             <th>Год выпуска</th>
         </tr>
 
-        <tr th:each="msg : ${messages}">
+        <tr th:each="msg : ${cars}">
             <td th:utext="${msg.getModel()}"></td>
             <td th:utext="${msg.getEngine()}"></td>
             <td th:utext="${msg.getYear()}"></td>
