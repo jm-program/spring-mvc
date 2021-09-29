@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<style>
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border: 3px solid teal;
+        border-collapse: collapse;
+    }
+    table th {
+        font-weight: bold;
+        padding: 5px;
+        background: #efefef;
+        border: 1px solid #dddddd;
+    }
+    table td {
+        border: 1px solid #dddddd;
+        padding: 5px;
+    }
+</style>
+
+<body>
+
+<div>
+    <table>
+        <tr>
+            <td><p>Manufacturer</p></td>
+            <td><p>Model</p></td>
+            <td><p>Average price</p></td>
+        </tr>
+        <th:block th:each="car : ${cars}">
+            <tr>
+                <td th:text="${car.getManufacturer()}">...</td>
+                <td th:text="${car.getMod()}">...</td>
+                <td th:text="${car.getAvgPrice()}">...</td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+</body>
+</html>
